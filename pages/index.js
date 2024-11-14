@@ -210,7 +210,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black h-screen mt-9" id="projects">
+      <div style={{marginTop: "300px"}} className="bg-black h-screen" id="projects">
         <div>
           <div className="text-white flex justify-center text-5xl">
             Projects
