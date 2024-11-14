@@ -157,6 +157,17 @@ const Home = () => {
                       <li>Laravel</li>
                     </ul>
                   </div>
+                  <div className="text-start">CSS Framework</div>
+                  <div className="ml-8">
+                    <ul className="list-disc">
+                      <li>Ant Design</li>
+                      <li>Tailwind</li>
+                      <li>Bootstrap</li>
+                      <li>Magic UI</li>
+                      <li>Element-Plus UI</li>
+                      <li>Material UI</li>
+                    </ul>
+                  </div>
                   <div className="text-start">Javascript Framework</div>
                   <div className="ml-8">
                     <ul className="list-disc">
