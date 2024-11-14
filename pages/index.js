@@ -99,7 +99,7 @@ const Home = () => {
                     alt='image'
                   />
                   <div className="flex justify-center">
-                    <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                    <BoxReveal boxColor={"#0895ff"} duration={0.5}>
                       <HyperText
                         duration={"1000"}
                         className="text-4xl font-bold text-white"
