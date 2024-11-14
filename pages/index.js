@@ -13,6 +13,11 @@ import { MagicCard } from "@/components/ui/magic-card";
 import TextField from "@mui/material/TextField";
 import ShinyButton from "@/components/ui/shiny-button";
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
+import Image from "next/image";
+import gc from '../public/gc.png';
+import bg from '../public/bg.png';
+import avatar from '../public/avatarbackground.png'
+import vcheck from '../public/vcheck.png'
 
 const Home = () => {
   const slugs = [
@@ -67,10 +72,7 @@ const Home = () => {
                 <HandymanIcon />
               </RainbowButton>
             </a>
-            <a
-              href="#projects"
-              className="mx-1"
-            >
+            <a href="#projects" className="mx-1">
               <RainbowButton>
                 <AccountTreeIcon />
               </RainbowButton>
@@ -90,16 +92,18 @@ const Home = () => {
             <div className="text-white">
               <div className="flex items-center justify-center h-screen">
                 <div>
-                  <img
-                    style={{ height: "400px", borderRadius: "90px" }}
-                    src="bg.png"
-                  ></img>
+                  <Image
+                    style={{ borderRadius: "90px" }}
+                    src={avatar}
+                    height ={400}
+                    alt='image'
+                  />
                   <div className="flex justify-center">
                     <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                       <HyperText
                         duration={"1000"}
                         className="text-4xl font-bold text-white"
-                        text="Roronoa Zoro"
+                        text="HI, I&apos;m Harvey"
                       />
                     </BoxReveal>
                   </div>
@@ -110,10 +114,10 @@ const Home = () => {
               <div className="flex items-center justify-center h-screen">
                 <BoxReveal boxColor={"#0895ff"}>
                   <div className="flex text-start mr-3">
-                    I'm a software engineer focused on turning your ideas into
+                    I&apos;m a software engineer focused on turning your ideas into
                     effective, user-friendly applications. I work with modern
                     web technologies like React, Vue, PHP (Laravel) to create
-                    scalable, dynamic solutions. Let’s build something great
+                    scalable, dynamic solutions. Let&apos;s build something great
                     together!
                   </div>
                 </BoxReveal>
@@ -204,7 +208,10 @@ const Home = () => {
             <div className="col-span-1">
               <div className="flex justify-center">
                 <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-                  <img src="gc.png" alt="" />
+                  <Image
+                    src={gc}
+                    alt='image'
+                  />
                 </NeonGradientCard>
               </div>
               <div className="text-white text-lg ml-12 mt-3">
@@ -248,7 +255,10 @@ const Home = () => {
             <div className="col-span-1">
               <div className="flex justify-center">
                 <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-                  <img src="vcheck.png" alt="" />
+                  <Image
+                    src={vcheck}
+                    alt='image'
+                  />
                 </NeonGradientCard>
               </div>
               <div className="text-white text-lg flex ml-12 mt-3">
@@ -291,7 +301,10 @@ const Home = () => {
             <div className="col-span-1">
               <div className="flex justify-center">
                 <NeonGradientCard className="max-w-sm items-center justify-center text-center">
-                  <img src="gc.png" alt="" />
+                  <Image
+                    src={gc}
+                    alt='image'
+                  />
                 </NeonGradientCard>
               </div>
               <div className="text-white text-lg flex ml-12 mt-3">
