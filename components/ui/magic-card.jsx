@@ -1,5 +1,5 @@
 "use client";;
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -11,29 +11,54 @@ export function MagicCard({
   gradientColor = "#262626",
   gradientOpacity = 0.8
 }) {
+  const cardRef = useRef(null);
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
 
   const handleMouseMove = useCallback((e) => {
-    const { left, top } = e.currentTarget.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
+    if (cardRef.current) {
+      const { left, top } = cardRef.current.getBoundingClientRect();
+      const clientX = e.clientX;
+      const clientY = e.clientY;
+      mouseX.set(clientX - left);
+      mouseY.set(clientY - top);
+    }
   }, [mouseX, mouseY]);
 
-  const handleMouseLeave = useCallback(() => {
+  const handleMouseOut = useCallback((e) => {
+    if (!e.relatedTarget) {
+      document.removeEventListener("mousemove", handleMouseMove);
+      mouseX.set(-gradientSize);
+      mouseY.set(-gradientSize);
+    }
+  }, [handleMouseMove, mouseX, gradientSize, mouseY]);
+
+  const handleMouseEnter = useCallback(() => {
+    document.addEventListener("mousemove", handleMouseMove);
     mouseX.set(-gradientSize);
     mouseY.set(-gradientSize);
-  }, [mouseX, mouseY, gradientSize]);
+  }, [handleMouseMove, mouseX, gradientSize, mouseY]);
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener("mouseenter", handleMouseEnter);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener("mouseenter", handleMouseEnter);
+    };
+  }, [handleMouseEnter, handleMouseMove, handleMouseOut]);
 
   useEffect(() => {
     mouseX.set(-gradientSize);
     mouseY.set(-gradientSize);
-  }, [mouseX, mouseY, gradientSize]);
+  }, [gradientSize, mouseX, mouseY]);
 
   return (
     (<div
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      ref={cardRef}
       className={cn(
         "group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white",
         className
