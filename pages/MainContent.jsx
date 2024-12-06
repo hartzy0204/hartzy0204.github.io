@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function MainContent() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
+    <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-lg">
       <Meteors number={30} />
       <div className="flex flex-wrap h-full">
         <div className="w-1/2 flex justify-center items-center">
