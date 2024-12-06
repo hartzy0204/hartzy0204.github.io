@@ -8,7 +8,6 @@ export default function Header() {
       <div className="w-1/2">
         <div className="flex justify-start items-center h-full mx-2">
           <SparklesText
-            sparklesCount={4}
             className={"text-lg"}
             text="<Harvey />"
           />

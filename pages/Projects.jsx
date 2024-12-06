@@ -3,13 +3,10 @@ import { MagicCard } from "@/components/ui/magic-card";
 
 export default function Projects({ project }) {
   const { theme } = useTheme();
-  const projectdata = project();
+  const projectdata = project && typeof project === "function" ? project() : { title: "Unknown", used: [] };
+
   return (
-    <div
-      className={
-        "flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row"
-      }
-    >
+    <div className="flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row">
       <MagicCard
         className="cursor-pointer flex-col bg-black text-white shadow-2xl whitespace-nowrap text-4xl"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
@@ -19,7 +16,7 @@ export default function Projects({ project }) {
             <p className="text-lg text-center break-words max-w-md mx-auto">
               {projectdata.title}
             </p>
-            <d className="text-lg mt-5">Technology</d>
+            <p className="text-lg mt-5">Technology</p>
             <ul className="list-disc pl-5 text-lg">
               {projectdata.used.map((item, index) => (
                 <li key={index}>{item}</li>

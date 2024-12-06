@@ -19,6 +19,9 @@ export default function Home() {
         <FloatingSkills />
       </div>
       <div className="h-screen">
+        <Project />
+      </div>
+      <div className="h-screen">
         <div className="flex justify-center text-4xl mt-11">Contact</div>
         <Contact />
       </div>
