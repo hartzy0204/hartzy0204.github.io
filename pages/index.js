@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <MagicCard
-        className="cursor-pointer bg-black text-white border-black"
+        className="cursor-none bg-black text-white border-black"
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       >
         <div>
