@@ -46,15 +46,13 @@ export default function FloatingSkills() {
                   items: [
                     "Vue.js",
                     "React.js",
-                    "Next.js",
-                    "Inertia.js",
                   ],
                 })}
               />
               <Skill
                 skills={() => ({
                   category: "Backend Development",
-                  items: ["Laravel", "Node.js", "RESTful APIs"],
+                  items: ["Laravel", "RESTful APIs"],
                 })}
               />
               <Skill
@@ -73,17 +71,15 @@ export default function FloatingSkills() {
               />
               <Skill
                 skills={() => ({
-                  category: "Tools & Technologies",
-                  items: ["pnpm", "npm", "Git", "Laragon (Nginx)"],
+                  category: "Mobile Development",
+                  items: ["React Native"],
                 })}
               />
               <Skill
                 skills={() => ({
-                  category: "Others",
+                  category: "SDLC",
                   items: [
                     "Agile Development",
-                    "Code Optimization",
-                    "Debugging",
                   ],
                 })}
               />

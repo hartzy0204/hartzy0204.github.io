@@ -26,10 +26,10 @@ export default function Home() {
         <div className="h-screen">
           <Project />
         </div>
-        <div className="h-screen">
+        {/* <div className="h-screen">
           <div className="flex justify-center text-4xl mt-11">Contact</div>
           <Contact />
-        </div>
+        </div> */}
       </MagicCard>
     </div>
   );
