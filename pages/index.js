@@ -20,7 +20,7 @@ export default function Home() {
         <div className="h-[90vh]">
           <MainContent />
         </div>
-        <div className="h-screen">
+        <div className="h-screen mt-[100px]">
           <FloatingSkills />
         </div>
         <div className="h-screen">

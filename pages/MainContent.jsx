@@ -11,7 +11,7 @@ export default function MainContent() {
         <div className="w-1/2 flex justify-center items-center">
           <div className="text-center">
             <Image
-              src="/avatarbackground.png"
+              src="/avatar.png"
               alt="Example image"
               layout="responsive"
               width={9}
