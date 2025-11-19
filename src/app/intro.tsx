@@ -18,7 +18,7 @@ export default function Intro() {
   const downloadFN = () => {
     setLoading(true);
     const link = document.createElement("a");
-    link.href = "CV(1).pdf";
+    link.href = "CV.pdf";
     link.download = "cv.pdf";
     document.body.appendChild(link);
     link.click();
