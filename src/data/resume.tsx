@@ -36,6 +36,12 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/#projects", icon: BriefcaseBusiness, label: "Projects" },
     { href: "/#contact", icon: Icons.email, label: "Contact" },
+    {
+      href: "https://github.com/hartzy0204",
+      icon: Icons.github,
+      label: "GitHub",
+      external: true,
+    },
   ],
 
   work: [
@@ -112,7 +118,13 @@ export const DATA = {
       active: true,
       description:
         "Digitizes manual paperwork and records management while providing a system to efficiently manage church record transactions.",
-      technologies: ["Laravel", "TypeScript", "Mysql", "TailwindCSS", "React.JS"],
+      technologies: [
+        "Laravel",
+        "TypeScript",
+        "Mysql",
+        "TailwindCSS",
+        "React.JS",
+      ],
       links: [
         {
           type: "Website",
@@ -130,7 +142,14 @@ export const DATA = {
       active: true,
       description:
         "Shuttlers Option is an online badminton store dedicated to players of all levels, offering a wide selection of quality rackets, shuttlecocks, apparel, shoes, and accessories. The website provides an easy and convenient shopping experience, helping badminton enthusiasts find the right gear to improve their performance on the court.",
-      technologies: ["Next.JS", "TypeScript", "Supabase", "TailwindCSS", "React.JS", "Vercel"],
+      technologies: [
+        "Next.JS",
+        "TypeScript",
+        "Supabase",
+        "TailwindCSS",
+        "React.JS",
+        "Vercel",
+      ],
       links: [
         {
           type: "Website",
